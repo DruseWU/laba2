@@ -28,7 +28,7 @@ Block Run From ADS
 
 Block Cert Revoked
     [Documentation]     Блокировака Cert Revoked
-    [Tags]              process
+    [Tags]              process     cert
 
     Configurate AppControl     Processes/Mask REG_QWORD 0x20        Name REG_SZ BLOCK_CERT_REVOKED_PROC_AUDIT
     Start Script               C:/App/Samples/Processes/revoked_process_sample.exe
@@ -37,7 +37,7 @@ Block Cert Revoked
 
 Block Cert Malware
     [Documentation]     Блокировака Cert Malware
-    [Tags]              process
+    [Tags]              process     cert
 
     Configurate AppControl     Processes/Mask REG_QWORD 0x40        Name REG_SZ BLOCK_CERT_MALWARE_PROC_AUDIT
     Start Script               C:/App/Samples/Processes/adware_process_sample.exe
@@ -162,6 +162,7 @@ Prepare environment
     Run AppControl      -Activate            ProfileGUID     RuleGUID
     Run AppControl      -AddProfileValue     ProfileGUID     Processes/Enabled REG_DWORD 0x1
     Run AppControl      -AddProfileValue     ProfileGUID     TestMode REG_DWORD 0x1
+    
 *** Settings ***
 Default Tags      owner-a.darkwolf
 Suite Setup       Prepare environment
