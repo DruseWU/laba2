@@ -8,7 +8,7 @@ Block WSL
 
     Check Value In Log        profile: ProfileGUID [BLOCK_WSL_PROC_AUDIT]
 
-Block WINSTORE
+Block WINSTORE12323
     [Documentation]     Блокировака Winstore
     [Tags]              process
 
